@@ -133,10 +133,14 @@ figure img {
     }
 
     .post-date {
-        padding: 1.5em 0.5em 0.5em 0.5em;
         border-bottom: none;
         width: 200px;
         padding: 0.5em;
+        margin-top: 17px;
+    }
+
+    h2 {
+        margin-top: 15px;
     }
 
     section {
