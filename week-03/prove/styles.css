@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: black;
+}
+
+body {
+  background-color: white;
+  width: 280px;
+  margin: auto;
+  text-align: center;
+}
+
+h1, h2 {
+  font-family: "Lora", serif;
+}
+
+p {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #333;
+  text-align: left;
+  padding: 1em;
+}
+
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: #666;
+}
+a:active {
+  color: #DEB887;
+}
+a:hover {
+  color: #00ddff;
+}
+
+h1 {
+  font-size: 40pt;
+  color: #333;
+  padding: 0.75em 0;
+}
+
+h2 {
+  font-size: 14pt;
+  text-align: left;
+  padding: 1em;
+}
+
+h1 a:hover {
+  color: #333;
+}
+h1 a:visited {
+  color: #333;
+}
+
+header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -webkit-flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+}
+
+nav {
+  border-top: 1px solid #d0d0d0;
+  border-bottom: 1px solid #d0d0d0;
+  color: #666;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -webkit-flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+  list-style-type: none;
+  font-size: 12pt;
+}
+
+nav ul li {
+  padding: 0.5em;
+  text-transform: uppercase;
+}
+
+.post-date {
+  padding: 1.5em 0.5em 0.5em 0.5em;
+  text-align: right;
+  border-bottom: 1px solid #d0d0d0;
+  font-size: 18pt;
+  font-family: "Lora", serif;
+  margin: 0.25em;
+}
+
+figure img {
+  width: 170px;
+  height: auto;
+}
+
+@media only screen and (min-width: 32.5em) {
+  body {
+    width: 650px;
+  }
+  nav ul {
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 1em;
+    text-align: right;
+    font-size: 12pt;
+  }
+  main {
+    margin: 1em 0;
+  }
+  article {
+    display: flex;
+  }
+  .post-date {
+    border-bottom: none;
+    width: 200px;
+    padding: 0.5em;
+    margin-top: 17px;
+  }
+  h2 {
+    margin-top: 15px;
+  }
+  section {
+    border-left: 1px solid #d0d0d0;
+    width: 500px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+//colors
+$html-background: black;
+$body-color: white;
+$font-color1: #333;
+$font-color2: #666;
+$font-color3: #00ddff;
+$font-color4: #DEB887;
+$line-color: #d0d0d0;
+$heading-font:  'Lora', serif;
+$paragraph-font: Helvetica, Arial, sans-serif;
+$break: 32.5em;
+
+@mixin flex-container($axis, $wrap: wrap) {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -webkit-flex-flow: $axis $wrap;
+    -ms-flex-flow: $axis $wrap;
+    flex-flow: $axis $wrap;
+}
+
+
+html {
+    background-color: $html-background;
+}
+
+body {
+    background-color: $body-color;
+    width: 280px;
+    margin: auto;
+    text-align: center;
+}
+
+h1, h2 {
+    font-family: $heading-font;
+}
+
+p {
+    font-family: $paragraph-font;
+    color: $font-color1;
+    text-align: left;
+    padding: 1em;
+}
+
+
+a {
+    text-decoration: none;
+    &:visited {
+        color:$font-color2;
+    }
+    &:active {
+        color: $font-color4;
+    }
+    &:hover {
+        color: $font-color3;
+    }
+}
+
+h1 {
+    font-size: 40pt;
+    color: $font-color1;
+    padding: 0.75em 0;
+}
+
+h2 {
+    font-size: 14pt;
+    text-align: left;
+    padding: 1em;
+}
+
+h1 {
+    & a:hover {
+        color: $font-color1;  
+    }
+    & a:visited {
+        color: $font-color1;
+    }
+}
+
+header {
+    @include flex-container(column);
+}
+
+nav {
+    border-top: 1px solid $line-color;
+    border-bottom: 1px solid $line-color;
+    color: $font-color2;
+}
+
+nav ul {
+    @include flex-container(column);
+    list-style-type: none;
+    font-size: 12pt;
+}
+
+nav ul li {
+    padding: 0.5em;  
+    text-transform: uppercase; 
+}
+
+.post-date {
+    padding: 1.5em 0.5em 0.5em 0.5em;
+    text-align: right;
+    border-bottom: 1px solid $line-color;
+    font-size: 18pt;
+    font-family: 'Lora', serif;
+    margin: 0.25em;
+}
+
+figure img {
+    width: 170px;
+    height: auto;
+}
+
+@media only screen and (min-width: 32.5em) {
+
+    body {
+        width: 650px;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: flex-end;
+        padding-right: 1em;
+        text-align: right;
+        font-size: 12pt;
+    }
+
+    main {
+        margin: 1em 0;
+    }
+
+    article {
+        display:flex;
+    }
+
+    .post-date {
+        border-bottom: none;
+        width: 200px;
+        padding: 0.5em;
+        margin-top: 17px;
+    }
+
+    h2 {
+        margin-top: 15px;
+    }
+
+    section {
+         border-left: 1px solid $line-color; 
+         width: 500px;
+    }
+
+}
